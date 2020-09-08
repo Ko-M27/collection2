@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: collection2_production
-  username: collection2
-  password: <%= ENV['COLLECTION2_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
