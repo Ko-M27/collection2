@@ -1,0 +1,13 @@
+=render 'modules/header'
+.new
+  =form_with model: @column, local: true do |f|
+    .new__form
+      =f.file_field :image, class: 'image_form form'
+      =f.text_field :tittle, class: 'form', placeholder: 'タイトル'
+      =f.text_area :text, class: 'text_form form', placeholder: 'type a message'
+      -# %p カテゴリー
+      -# .new__form__category
+      -#   #parent-category
+      -#     =f.select :category_id, options_for_select( @category_parent_array.map{|c| [c[:text], c[:id]]}), {include_blank: "選択してください"}, { class: "category_form form", id: "parent-form"}
+      -#   #children-category
+      =f.submit '投稿', class: 'submit_form'

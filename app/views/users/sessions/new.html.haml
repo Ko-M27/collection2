@@ -1,0 +1,40 @@
+= render 'modules/header'
+.login-user
+  %h2 ログイン
+  %p アーティストが創作した作品を発表しよう
+  .login-user__form
+    .login-user__form__email
+      .tittle 
+        %span メールアドレスでログイン
+      =form_with model: @user, url: user_session_path do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .login-user__form__email__field
+          .form-tittle
+            = f.label :email, "Eメール"
+          .form-main
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: 'input-form'
+        .login-user__form__email__field
+          .form-tittle
+            = f.label :password, "パスワード"
+          .form-main
+            = f.password_field :password, autocomplete: "current-password", class: 'input-form'
+        - if devise_mapping.rememberable?
+          .remember
+            = f.check_box :remember_me
+            = f.label :remember, "ログインしたままにする"
+        .actions
+          = f.submit "ログイン", id: 'submit-btn'
+          .forget-password
+            = link_to "パスワードを忘れた場合", new_user_password_path
+          .legal-text
+            続行することで、COLLECTIONの
+            \#{link_to "利用規約", "#"}
+            および
+            \#{link_to "プライバシー規約", "#"}
+            に同意するものとみなされます。
+      .box-newusr
+        %p
+          %span ------------
+          COLLECTIONの新しいお客様ですか？
+          %span ------------
+        = link_to "COLLECTIONアカウントを作成", new_user_registration_path

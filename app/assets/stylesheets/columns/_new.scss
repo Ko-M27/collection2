@@ -1,0 +1,33 @@
+.new {
+  margin: 50px auto;
+  width: 750px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form {
+      width: 500px;
+      height: 35px;
+      margin: 15px auto;
+    }
+    .text_form {
+      height: 300px;
+    }
+    &__category {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .submit_form {
+      width: 100px;
+      margin: 15px auto;
+      color: #ffffff;
+      background-color: lightseagreen;
+      border: none;
+    }
+  }
+  
+}
+

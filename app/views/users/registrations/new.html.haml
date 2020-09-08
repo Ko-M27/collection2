@@ -1,0 +1,33 @@
+= render 'modules/header'
+.new-user
+  %h2 新規登録
+  %p アーティストが創作した作品を発表しよう
+  .new-user__form
+    .new-user__form__email
+      .tittle 
+        %span メールアドレスで登録
+      =form_with model: @user, url: user_registration_path, class: 'new_user', id: 'new_user', local: true do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .new-user__form__email__field
+          .form-tittle
+            = f.label :name, 'ユーザー名'
+          .form-main
+            = f.text_field :name, autofocus: true, autocomplete: "name", class: 'input-form'
+        .new-user__form__email__field
+          .form-tittle
+            = f.label :email, 'メールアドレス'
+          .form-main
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: 'input-form'
+        .new-user__form__email__field
+          .form-tittle
+            = f.label :password, 'パスワード'
+          .form-main
+            = f.password_field :password, autocomplete: "new-password", class: 'input-form'
+        .new-user__form__email__field
+          .form-tittle
+            = f.label :password_confirmation, 'パスワード(確認)'
+          .form-main
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: 'input-form'
+        .actions
+          = f.submit "登録する", id: 'submit-btn'
+          =link_to 'ログイン', new_user_session_path

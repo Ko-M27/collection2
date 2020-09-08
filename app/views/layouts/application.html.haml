@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:column => "text/html; charset=UTF-8", "http-equiv" => "Column-Type"}/
+    %title Collection
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
+  %body
+    = yield
+
