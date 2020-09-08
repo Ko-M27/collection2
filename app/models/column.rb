@@ -21,5 +21,4 @@ class Column < ApplicationRecord
         self.tags << post_tag
       end
     end
-  end
 end
