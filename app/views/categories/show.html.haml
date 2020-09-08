@@ -1,0 +1,26 @@
+=render 'modules/header'
+.main
+  .contents
+    .menu-list
+      %ul.tag-list
+        %p タグ
+        -@tags.each do |tag|
+          %li.tag 
+            = link_to tag.tag
+
+      %ul.category-list
+        %p カテゴリー
+        -@category_parent_array.each do |category|
+          %li.category 
+            =link_to category_path(category.id) do
+              = category.name
+
+    .main-content
+      -@contents.each do |content|
+        .content
+          = image_tag content.images.first.src.url, :size => '240x328'
+
+%footer
+  .footer-item
+    %h2.logo COLLECTION
+    %p.copy ©︎2020COLLECTION

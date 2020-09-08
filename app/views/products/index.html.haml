@@ -1,0 +1,25 @@
+=render 'modules/header'
+.main
+  .contents
+    =render 'modules/side_bar'
+
+    .main-product
+      -@products.each do |product|
+        = link_to product_path(product.id) do
+          .product
+            .product__image
+              = image_tag product.images.first.src.url
+            .product__name
+              %p 
+                = product.name
+            .product__price
+              %p ¥
+              %p 
+                = product.price
+            .product__user
+              %p 
+                = product.user_seller.name
+            .product__text
+              %p 
+                = product.text_1
+=render 'modules/footer'

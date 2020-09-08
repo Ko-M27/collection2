@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   }
   root "columns#index"
   resources :columns
-  resources :users
   resources :categories
   resources :products do
     collection do
