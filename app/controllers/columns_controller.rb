@@ -1,5 +1,6 @@
 class ColumnsController < ApplicationController
   before_action :set_category
+  before_action :set_column, only: [:show]
 
   def index
     @columns = Column.all.order(created_at: "DESC")
@@ -23,6 +24,10 @@ class ColumnsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   private
   def column_params
     params.require(:column).permit(:tittle, :text, :image).merge(user_id: current_user.id)
@@ -30,6 +35,10 @@ class ColumnsController < ApplicationController
 
   def set_category  
     @category_parent_array = Category.where(ancestry: nil)
+  end
+
+  def set_column
+    @column = Column.find(params[:id])
   end
 
 end
