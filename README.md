@@ -22,11 +22,16 @@ awsを使用したデプロイ
 * rootページ
 ![rootページ](https://user-images.githubusercontent.com/61015936/92798953-5f9b4a00-f3ee-11ea-9d0c-a00c9fb9e25c.png)
 
-* 新規投稿
-  ![新規投稿2](https://user-images.githubusercontent.com/61015936/88525475-98958000-d035-11ea-892e-87cbcceb93fd.gif)
+* 投稿詳細ページ
+![投稿詳細ページ](https://user-images.githubusercontent.com/61015936/92800381-99208500-f3ef-11ea-946f-83089dc4d6cd.png)
+
+* 新規出品画像選択（JavaScript_jQuery）
+![新規出品画像選択](https://user-images.githubusercontent.com/61015936/92801199-5e6b1c80-f3f0-11ea-9398-a2c9dea4034f.gif)
+
   
 
 # Requirement
 * 開発環境
 - Rails 6.0.3.2
 - ruby 2.6.5p114
+- http://54.199.222.120/
