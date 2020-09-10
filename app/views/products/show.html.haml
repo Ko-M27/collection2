@@ -1,1 +1,33 @@
 =render 'modules/header'
+.product_show
+  .product
+    .product__name
+      %h2
+        =@product.name
+      %p
+        =@product.user_seller.name
+    .product__info
+      .product__info__right
+        .image-main
+          = image_tag @images.first.src.url,class:"ItemsInfo__image__MainBox"
+        .image-sub
+          - @images.each do |image|
+            = image_tag image.src.url,class:"ItemsInfo__image__SubBox__image"
+      .product__info__left
+        .price
+          %p
+            =@product.price
+          %p 円
+          .shipping_fee
+            =@product.shipping_fee
+        .text_1
+          %h5 商品説明
+          %p
+            =@product.text_1
+        .text_2
+          =@product.text_2
+        .btn
+          -if user_signed_in? && current_user.id != @item.user_seller_id
+            .ItemsBuy
+              = link_to '購入画面に進む', #
+=render 'modules/footer'
