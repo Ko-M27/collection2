@@ -1,12 +1,13 @@
 =render 'modules/header'
 .column_show
+  =render 'modules/side_bar'
   .column
     .column__tittle
-      = @column.tittle
+      %h2
+        = @column.tittle
     .column__image
-      = @column.image
+      = image_tag @column.image.url
     .column__text
-      = @column.text
-
-
+      %p
+        = @column.text
 =render 'modules/footer'
