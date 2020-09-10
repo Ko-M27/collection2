@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
   def show
     @products = Product.all.order(created_at: "DESC")
     @tags = Tag.all
+    @images = Image.where(product_id: params[:id])
   end
 
   def edit
