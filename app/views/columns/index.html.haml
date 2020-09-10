@@ -1,21 +1,19 @@
 =render 'modules/header'
-.main
-  .columns
-    =render 'modules/side_bar'
-
-    .main-column
-      -@columns.each do |column|
-        = link_to column_path(column.id) do
-          .column
-            .column__image
-              = image_tag column.image.url
-            .column__tittle
-              %p
-                = column.tittle
-            .column__user
-              %p
-                = column.user.name
-            .column__text
-              %p
-                = column.text
+.column_index
+  =render 'modules/side_bar'
+  .main-columns
+    -@columns.each do |column|
+      = link_to column_path(column.id) do
+        .column
+          .column__image
+            = image_tag column.image.url
+          .column__tittle
+            %p
+              = column.tittle
+          .column__user
+            %p
+              = column.user.name
+          .column__text
+            %p
+              = column.text
 =render 'modules/footer'

@@ -1,10 +1,10 @@
 class ColumnsController < ApplicationController
   before_action :set_category
+  before_action :set_tag
   before_action :set_column, only: [:show]
 
   def index
     @columns = Column.all.order(created_at: "DESC")
-    @tags = Tag.all
   end
 
   def new
@@ -35,6 +35,10 @@ class ColumnsController < ApplicationController
 
   def set_category  
     @category_parent_array = Category.where(ancestry: nil)
+  end
+
+  def set_tag
+    @tags = Tag.all
   end
 
   def set_column
