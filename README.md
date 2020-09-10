@@ -45,3 +45,8 @@ awsを使用したデプロイ
 * 開発環境
 - Rails 6.0.3.2
 - ruby 2.6.5p114
+
+# Author
+* 製作者：ミハラコウダイ
+* 所属：TECH::CAMP短期
+* Email：s78.mihara.kodai@gmail.com
