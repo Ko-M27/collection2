@@ -28,10 +28,20 @@ awsを使用したデプロイ
 * 新規出品画像選択（JavaScript_jQuery）
 ![新規出品画像選択](https://user-images.githubusercontent.com/61015936/92801199-5e6b1c80-f3f0-11ea-9398-a2c9dea4034f.gif)
 
-  
+# 本番環境
+<ul>
+  <li>URL: http://54.199.222.120/</li>
+</ul>
+<ul>アカウント
+  <li>アカウント1</li>
+  <li>メールアドレス名: seller_user@gmail.com</li>
+  <li>パスワード: 123456</li>
+  <li>アカウント2</li>
+  <li>メールアドレス : buyer_user@gmail.com</li>
+  <li>パスワード : 123456</li>
+</ul>
 
 # Requirement
 * 開発環境
 - Rails 6.0.3.2
 - ruby 2.6.5p114
-- http://54.199.222.120/
