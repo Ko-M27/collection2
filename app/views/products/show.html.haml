@@ -27,7 +27,7 @@
         .text_2
           =@product.text_2
         .btn
-          -if user_signed_in? && current_user.id != @item.user_seller_id
+          -if user_signed_in? && current_user.id != @product.user_seller_id
             .ItemsBuy
               = link_to '購入画面に進む'
 =render 'modules/footer'
